@@ -5,26 +5,38 @@
   <title>Frontend Union Conf</title>
 
   <style>
-  @import 'PTMonoWeb/PTM55F_stylesheet.css';
+  @import 'PTMonoWeb/PTM75F_stylesheet.css';
 
   body {
     margin: 0;
     background: blue;
+    font-family: 'PT Mono Bold', 'PTMonoBold', monospace;
+    font-size: 25px;
+    letter-spacing: 0.25px;
+    color: white;
   }
 
   .wrapper {
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    width: 530px;
     height: 100vh;
+    margin: 0 auto;
   }
 
   .logo {
     width: 123px;
     height: 181px;
-    margin: auto;
-    font-family: 'PT Mono', monospace;
-    font-weight: bold;
-    font-size: 25px;
-    color: white;
   }
 
   .symbol {
@@ -32,11 +44,22 @@
     width: 82px;
     height: 82px;
     border: 4px solid white;
+    font-size: 31px;
     text-align: center;
   }
 
   .symbol div {
-    line-height: 74px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    width: 46px;
+    margin: 0 auto;
+    line-height: 70px;
   }
 
   .text {
@@ -44,7 +67,36 @@
   }
 
   article {
+    margin-top: 59px;
+  }
 
+  pre {
+    margin: 0;
+    font-family: 'PT Mono Bold', 'PTMonoBold', monospace;
+  }
+
+  pre a {
+    text-decoration: underline;
+  }
+
+  pre a:hover {
+    text-decoration: none;
+  }
+
+  pre a,
+  pre a:link,
+  pre a:hover,
+  pre a:active,
+  pre a:visited {
+    color: rgb(175,205,255);
+  }
+
+  .violet {
+    color: rgb(175,205,255);
+  }
+
+  .pink {
+    color: rgb(255,85,120);
   }
   </style>
 </head>
@@ -52,7 +104,7 @@
   <section class="wrapper">
     <div class="logo">
       <div class="symbol">
-        <div>{ }</div>
+        <div><span>{</span><span>}</span></div>
       </div>
 
       <div class="text">
@@ -61,6 +113,17 @@
         <div>Conf</div>
       </div>
     </div>
+
+    <article>
+      <pre><span class="violet">frontendUnionConf</span> = {
+  <span class="violet">year:</span>   <span class="pink">2015</span>,
+  <span class="violet">month:</span>  'Aug',
+  <span class="violet">day:</span>    <span class="pink">29</span>,
+  <span class="violet">place:</span>  'MailRu Group HQ'
+}
+
+shareWithFriends<span class="violet">(<a href="http://facebook.com/frontendunion" target="_blank">facebook</a>, <a href="http://twitter.com/frontend_union" target="_blank">twitter</a>)</span></pre>
+    </article>
   </section>
 </body>
 </html>
